@@ -20,7 +20,7 @@ const ReportsSection = () => {
   useEffect(() => {
     const casesRef = collection(db, "forms");
     const unsubscribe = onSnapshot(casesRef, (snapshot) => {
-      const caseList = snapshot.docs.map(doc => {
+      const caseList = snapshot.docs.map((doc) => {
         const data = doc.data();
         return {
           id: doc.id,
@@ -38,13 +38,19 @@ const ReportsSection = () => {
   }, []);
 
   if (selectedCase) {
-    return <CaseDashboard caseId={selectedCase} onBack={() => setSelectedCase(null)} />;
+    return (
+      <CaseDashboard
+        caseId={selectedCase}
+        onBack={() => setSelectedCase(null)}
+      />
+    );
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 bg-white shadow-lg p-8 rounded-lg my-10">
       {cases.length === 0 && <p>No cases found</p>}
-      {cases.map(c => (
+      <h1 className="font-bold text-2xl mb-2">Reports</h1>
+      {cases.map((c) => (
         <CaseCard key={c.id} {...c} onClick={() => setSelectedCase(c.id)} />
       ))}
     </div>
