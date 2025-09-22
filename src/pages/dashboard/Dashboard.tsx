@@ -111,7 +111,17 @@ const Dashboard = () => {
                 </div>
               </div>
               {/* <HealthMap /> */}
-              <div className="h-[400px] w-full"></div>
+              <div className="h-[400px] w-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.58771473488!2d77.93473199679377!3d30.325550807284813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1758514834466!5m2!1sen!2sin"
+                  width="600"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
 
             {/* Reports Section */}
