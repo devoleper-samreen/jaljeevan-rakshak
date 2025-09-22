@@ -74,7 +74,7 @@ const Navbar = () => {
             variant="ghost"
             size="icon"
             onClick={toggleDarkMode}
-            className="relative bg-gray-100"
+            className="relative bg-gray-100 dark:bg-transparent"
           >
             {darkMode ? (
               <Sun className="h-5 w-5" />
@@ -89,7 +89,7 @@ const Navbar = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative bg-gray-100"
+                className="relative bg-gray-100 dark:bg-transparent"
               >
                 <Bell className="h-5 w-5" />
                 <motion.div
@@ -151,7 +151,7 @@ const Navbar = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="relative h-8 w-8 rounded-full bg-gray-200"
+                className="relative h-8 w-8 rounded-full bg-gray-200 dark:bg-transparent"
               >
                 <User className="h-4 w-4" />
               </Button>

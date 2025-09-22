@@ -47,7 +47,7 @@ const ReportsSection = () => {
   }
 
   return (
-    <div className="space-y-4 bg-white shadow-lg p-8 rounded-lg my-10">
+    <div className="space-y-4 shadow-lg p-8 rounded-lg my-10 dark:border dark: border-gray-700">
       {cases.length === 0 && <p>No cases found</p>}
       <h1 className="font-bold text-2xl mb-2">Reports</h1>
       {cases.map((c) => (
